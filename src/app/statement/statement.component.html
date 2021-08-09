@@ -1,0 +1,20 @@
+<section class="container">
+  <h2 class="title">Statement</h2>
+<table class="table">
+  <thead class="table__head">
+    <th class="table__head__content">Date</th>
+    <th class="table__head__content">Amount</th>
+    <th class="table__head__content">Beneficiary</th>
+  </thead>
+  <tbody *ngIf="transferences?.length; else nodata">
+  <tr class="table__lines" *ngFor="let transference of transferences">
+    <td class="table__content">{{ transference.date | date: "short" }}</td>
+    <td class="table__content">{{ transference.amount | currency }}</td>
+    <td class="table__content">{{ transference.beneficiary }}</td>
+  </tr>
+  </tbody>
+</table>
+<ng-template #nodata>
+  <p>You don't have Transfers!</p>
+</ng-template>
+</section>

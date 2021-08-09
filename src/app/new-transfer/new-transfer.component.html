@@ -1,0 +1,19 @@
+<section class="container">
+<form class="form" (ngSubmit)="transfer()">
+  <h2 class="form__title">New Transfer</h2>
+  <div class="form-field">
+    <label class="form-field__label" for="amount">Amount</label>
+    <input class="form-field__input" id="amount" type="number" [(ngModel)]="amount" name="amount" />
+  </div>
+
+  <div class="form-field">
+    <label class="form-field__label" for="beneficiary">Beneficiary</label>
+    <input class="form-field__input" id="beneficiary" type="text" [(ngModel)]="beneficiary" name="beneficiary" />
+  </div>
+
+  <div class="button-wrapper">
+    <button class="button" type="submit">Transfer Now</button>
+  </div>
+
+</form>
+</section>
